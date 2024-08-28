@@ -3,6 +3,8 @@ import "./globals.css";
 import favicon from "@/app/favicon.ico";
 import LayoutChildren from "@/lib/layoutChildren";
 import ProgressCircle from "@/components/ui/scrollCircle";
+import { Analytics } from '@vercel/analytics/react';
+
 
 const plus_jakarta_sans = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -37,6 +39,7 @@ export default function RootLayout({ children }) {
             {children}
           </LayoutChildren>
         </div>
+        <Analytics/>
       </body>
     </html>
   );
