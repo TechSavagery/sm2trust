@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import AboutOne from "@/components/section/about/aboutOne";
 import Gallery from "@/components/section/gallery";
@@ -28,7 +29,9 @@ import { servicesData } from "@/lib/fakeData/servicesData";
 import ServiceCard from "@/components/ui/cards/serviceCard";
 import AboutThree from "@/components/section/about/aboutThree";
 import Faq from "@/components/section/faq";
-
+import GeneralAbout from "@/components/section/about/generalAbout";
+import faq_img from "@/assets/images/grapes.jpg";
+import bg_banner from "@/assets/images/contact-image-2.jpg";
 
 const Home = () => {
   const [privacyAlertActive, setPrivacyAlertActive] = useState(false);
@@ -74,36 +77,149 @@ const Home = () => {
             />
           </div>
         </section>
-        <div className="container-fluid lg:pt-20 2sm:pt-16 pt-10">
-          <div className="grid 2xl:grid-cols-3 lg:grid-cols-3 sm:grid-cols-2 gap-8 px-4 2sm:px-0">
-            {servicesData.map(({ id, service_desc, service_name, link }) => (
-              <ServiceCard
-                key={id}
-                id={id}
-                service_desc={service_desc}
-                service_name={service_name}
-                link={link}
-              />
-            ))}
+        <div
+          id="services-anchor"
+          style={{ position: "relative", top: "-100px" }}
+        ></div>
+        <section id="services">
+          <div className="container-fluid lg:pt-20 2sm:pt-16 pt-10">
+            <div className="grid 2xl:grid-cols-3 lg:grid-cols-3 sm:grid-cols-2 gap-8 px-4 2sm:px-0">
+              {servicesData.map(({ id, service_desc, service_name, link }) => (
+                <ServiceCard
+                  key={id}
+                  id={id}
+                  service_desc={service_desc}
+                  service_name={service_name}
+                  link={link}
+                />
+              ))}
+            </div>
           </div>
-        </div>
-        <AboutThree />
+        </section>
+
+        <section className="blog-single pt-30">
+          <div>
+            <Image src={bg_banner} loading="lazy" alt="img" />
+            <div
+              id="about-anchor"
+              style={{ position: "relative", top: "-100px" }}
+            ></div>
+            <div id="about" className="container 2sm:mt-[156px] sm:mt-30 mt-20">
+              <div className="grid lg:grid-cols-[65%_auto] gap-[38px]">
+                <div className="relative after:absolute sm:after:-left-12.5 after:-left-5 after:top-1/2 after:-translate-y-1/2 after:w-[1px] sm:after:h-[130%] after:h-[120%] after:bg-primary sm:ml-12.5 ml-5">
+                  <h1 className="text-primary-foreground [font-size:_clamp(48px,7vw,130px)] font-extrabold leading-110">
+                    Our Story
+                  </h1>
+                  <span className="inline-block w-[300px] h-[1px] bg-primary"></span>
+                  <p className="text-base sm:text-lg 2sm:text-lg !leading-160 text-primary-foreground mt-[18px]">
+                    SM2 Trust was founded by Shelley M. McConnell and Stephen P.
+                    Maguire to provide fiduciary services for clients on the
+                    Central Coast of California. A fiduciary, one to whom
+                    property or powers are entrusted for the exclusive benefit
+                    of another, is held to the highest legal and ethical
+                    standards of care and responsibility. A fiduciary can be
+                    entrusted with the obligation to manage financial assets,
+                    health care needs, quality-of-life considerations, and
+                    end-of-life decisions for individuals in need.
+                  </p>
+                  <p className="text-base sm:text-lg 2sm:text-lg !leading-160 text-primary-foreground mt-[18px]">
+                    The State of California Department of Consumer Affairs
+                    licenses qualified individuals to provide these services on
+                    a fee basis. Under the fiduciary umbrella, SM2 offers
+                    trustee, conservator-of-the-person,
+                    conservator-of-the-estate, guardianship, and estate
+                    settlement capabilities for clients.
+                  </p>
+                  <p className="text-base sm:text-lg 2sm:text-lg !leading-160 text-primary-foreground mt-[18px]">
+                    Shelley M. McConnell and Stephen P. Maguire are committed to
+                    honoring the abiding trust placed in SM2 by their cherished
+                    clients. SM2 fiduciaries adhere to a level of respect,
+                    responsibility, and integrity that will ensure the
+                    intentions and wishes of clients are carried out to the
+                    letter.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="container 2sm:mt-[156px] sm:mt-30 mt-20 pt-40">
+              <div className="grid lg:grid-cols-[65%_auto] gap-[38px]">
+                <div className="relative after:absolute sm:after:-left-12.5 after:-left-5 after:top-1/2 after:-translate-y-1/2 after:w-[1px] sm:after:h-[130%] after:h-[120%] after:bg-primary sm:ml-12.5 ml-5">
+                  <h1 className="text-primary-foreground [font-size:_clamp(48px,7vw,130px)] font-extrabold leading-110">
+                    Methodology
+                  </h1>
+                  <span className="inline-block w-[300px] h-[1px] bg-primary"></span>
+                  <p className="text-base sm:text-lg 2sm:text-lg !leading-160 text-primary-foreground mt-[18px]">
+                    Of paramount importance to the fiduciary is a complete and
+                    thorough understanding of the client’s wishes. Partners
+                    McConnell and Maguire begin by cultivating a deep
+                    understanding of the client’s wishes, expectations, hopes,
+                    dreams, and fears. Attention is paid to the personal,
+                    familial, and spiritual beliefs of the client. Above all,
+                    SM2 fiduciaries are charged with respecting the client’s
+                    wishes first and foremost.
+                  </p>
+                  <p className="text-base sm:text-lg 2sm:text-lg !leading-160 text-primary-foreground mt-[18px]">
+                    SM2 will also work with family members, friends, attorneys,
+                    and religious leaders in an attempt to understand each
+                    individual client. Documents, such as trusts, wills,
+                    powers-of-attorney, and health care directives, also provide
+                    essential information in this process.
+                  </p>
+                  <p className="text-base sm:text-lg 2sm:text-lg !leading-160 text-primary-foreground mt-[18px]">
+                    SM2 fiduciaries will include the client in as many decisions
+                    as can be accommodated while acting as non-invasively as
+                    possible. SM2 fiduciaries act exclusively in the best
+                    interest of both the client’s person and estate.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="container 2sm:mt-[156px] sm:mt-30 mt-20 pt-40">
+              <div className="grid lg:grid-cols-[65%_auto] gap-[38px]">
+                <div className="relative after:absolute sm:after:-left-12.5 after:-left-5 after:top-1/2 after:-translate-y-1/2 after:w-[1px] sm:after:h-[130%] after:h-[120%] after:bg-primary sm:ml-12.5 ml-5">
+                  <h1 className="text-primary-foreground [font-size:_clamp(48px,7vw,130px)] font-extrabold leading-110">
+                    Mission Statement
+                  </h1>
+                  <span className="inline-block w-[300px] h-[1px] bg-primary"></span>
+                  <p className="text-2xl sm:text-3xl 2sm:text-4xl !leading-160 text-primary-foreground mt-[18px]">
+                    We provide attentive personal care and prudent financial
+                    management to clients under a fiduciary standards of
+                    responsibility, transparency, confidentiality, and
+                    integrity.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* <AboutThree /> */}
         {/* <Counter />
         <Gallery />
         <ServicesSlider /> */}
+        <div
+          id="faq-anchor"
+          style={{ position: "relative", top: "-100px" }}
+        ></div>
+        <section id="faq">
+          {" "}
+          <Faq className={"pb-20"} />
+        </section>
 
         {/* --------- start team section */}
-        <Faq className={"pb-20"} />
-        <section className="pt-20">
+        <div
+          id="team-anchor"
+          style={{ position: "relative", top: "-100px" }}
+        ></div>
+        <section id="team" className="pt-20">
           <div className="container-fluid ">
             <SectionTitle
               sectionName={"Team"}
-              sectionTitle={"Architects of Architronix"}
+              sectionTitle={"Our Team"}
               sectionDesc={
-                "Where Imagination Takes Flight, and Excellence Blossoms"
+                "Meet the dedicated professionals committed to upholding the highest standards of care and fiduciary responsibility."
               }
-              button_text={"All Architects"}
-              link={"/team"}
             />
           </div>
           <div className="container lg:pt-30 2sm:pt-20 pt-14">
@@ -122,18 +238,23 @@ const Home = () => {
         </section>
         {/* --------- end team section */}
 
-        <VideoPortfolio />
-        <ProjectsSlider />
+        {/* <VideoPortfolio /> */}
+        {/* <ProjectsSlider />
         <Testimonial />
-        <ShopSlider data={productData.slice(0, 5)} />
+        <ShopSlider data={productData.slice(0, 5)} /> */}
 
         {/* -------- blog slider start */}
-        <section className="pt-20">
+        {/* --------- start team section */}
+        <div
+          id="blog-anchor"
+          style={{ position: "relative", top: "-100px" }}
+        ></div>
+        <section id="blog" className="pt-20">
           <div className="container-fluid ">
             <SectionTitle
               sectionName={"Blog"}
-              sectionTitle={"Design Insights & Inspiration"}
-              sectionDesc={"Unveil the Secrets to Transforming Spaces"}
+              sectionTitle={"Blog"}
+              sectionDesc={"Current trends in Conservatorship"}
             />
           </div>
           <div className="container lg:pt-30 2sm:pt-20 pt-14">

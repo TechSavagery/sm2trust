@@ -6,7 +6,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import SectionTitle from "../ui/sectionTitle";
-import faq_img from "@/assets/images/faq-image.jpg";
+import faq_img from "@/assets/images/grapes.jpg";
 import SectionSidebarImg from "../ui/sectionSidebarImg";
 
 const faqData = [
@@ -76,16 +76,39 @@ Someone might set up a trust for a beneficiary because the beneficiary:
   },
   {
     id: "4",
-    question: "What Can I Expect from Your Room Makeover Services?",
+    question: "When is a guardianship or conservatorship appropriate?",
     ans: `
-        Our interior design services encompass a wide range of offerings, including color consultation, furniture selection, space planning, decor styling, and more. We work closely with you to create spaces that reflect your vision and practical needs.
+        
+  Sometimes, an illness, injury, or disability can make it difficult or impossible for someone to make decisions about his or her health care, money, living situation, or other personal matters. Examples may include:
+<br/>
+<br/>
+      <li>Someone who is in a coma.</li>
+      <li>Someone who is mentally challenged.</li>
+      <li>Someone who has Alzheimer’s disease or other forms of dementia.</li>
+      <li>Someone who has had a stroke.</li>
+      <li>Someone who has suffered a brain injury.</li>
+
+<br/>
+  If a court finds that a person cannot make any or all of his or her important life decisions, that person is <strong>incapacitated</strong>
+ To decide whether someone is incapacitated, the court holds a hearing and looks at all the facts. It will find that a person is incapacitated if it believes the facts show the person cannot:
+ <br/>
+ <br/>     
+ <li>understand the facts about his or her financial, health care, or living situation well enough to make decisions about any or all of those matters, or</li>
+      <li>clearly communicate his or her wishes about any or all of those matters.</li>
+ 
+
+
         `,
   },
   {
     id: "5",
-    question: "How Do Your Lighting Design Services Work?",
+    question:
+      "Could the plot of Netflix's I Care a Lot really happen, and, if so, could it happen to me in California?",
     ans: `
-        Our interior design services encompass a wide range of offerings, including color consultation, furniture selection, space planning, decor styling, and more. We work closely with you to create spaces that reflect your vision and practical needs.
+        There has been an increase in awareness of fraud in the Conservatorship industry due to the recent Netflix production “I Care a Lot”. This film does not accurately depict the conservatorship process and instead paints it with negativity. Below you will find a detailed report that accurately explains the process while debunking information that was present in the film. Feel free to reach out to us if you have any further questions concerning this topic!
+ <br/>    
+  <br/>    
+https://californiaconservatorshipfacts.com/
         `,
   },
 ];
@@ -96,8 +119,8 @@ const Faq = ({ className }) => {
       <div className="container-fluid">
         <SectionTitle
           sectionName={"FAQ"}
-          sectionTitle={"Design Insights Unveiled"}
-          sectionDesc={"Answers to Your Design Questions"}
+          sectionTitle={"FAQ"}
+          sectionDesc={"Answers to Your Conservator & Trustee Questions"}
         />
       </div>
       <div className="container lg:pt-30 2sm:pt-20 pt-14">
@@ -115,9 +138,7 @@ const Faq = ({ className }) => {
                       {question}
                     </AccordionTrigger>
                     <AccordionContent className="mt-[22px] sm:px-12.5 px-6">
-                      <div
-                        dangerouslySetInnerHTML={{ __html: ans }}
-                      />
+                      <div dangerouslySetInnerHTML={{ __html: ans }} />
                     </AccordionContent>
                   </AccordionItem>
                 );

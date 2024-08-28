@@ -16,7 +16,7 @@ const TeamCardOne = ({ img, social_link, name, position, text_muted, cardVariant
     >
       <div className='relative group hover-underline'>
         <div className='relative'>
-          <div className=' absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-500 group-hover:w-full group-hover:h-full group-hover:opacity-100 h-0 w-0 opacity-0 flex justify-center items-center bg-[#D2E0D9CC]'>
+          {/* <div className=' absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-500 group-hover:w-full group-hover:h-full group-hover:opacity-100 h-0 w-0 opacity-0 flex justify-center items-center bg-[#D2E0D9CC]'>
             <ul className='flex items-center gap-7.5'>
               {
                 social_link.map(({ id, link, media }) => {
@@ -28,7 +28,7 @@ const TeamCardOne = ({ img, social_link, name, position, text_muted, cardVariant
                 })
               }
             </ul>
-          </div>
+          </div> */}
           <Image src={img} loading='lazy'      width={"auto"} height={"auto"} alt={name} className='w-full h-full' />
         </div>
         <div className='bg-secondary  absolute left-0 bottom-[-10%] min-w-[295px] transition-all duration-500 group-hover:min-w-full'>

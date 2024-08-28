@@ -1,5 +1,5 @@
-import team_1 from "@/assets/images/team-1.jpg";
-import team_2 from "@/assets/images/team-2.jpg";
+import team_1 from "@/assets/images/steve_maguire.jpeg";
+import team_2 from "@/assets/images/shelley_mcconnell.jpg";
 import team_3 from "@/assets/images/team-3.jpg";
 import team_4 from "@/assets/images/team-4.jpg";
 import team_5 from "@/assets/images/team-5.jpg";
@@ -16,8 +16,8 @@ export const teamData = [
   {
     id: 1,
     img: team_1,
-    name: "Russell Otten",
-    position: "Interior Alchemist",
+    name: "Stephen Maguire",
+    position: "Partner",
     social_link: [
       {
         id: 1,
@@ -76,8 +76,8 @@ export const teamData = [
   {
     id: 2,
     img: team_2,
-    name: "Robert Jhonson",
-    position: "Chief Design Orchestrator",
+    name: "Shelley McConnell",
+    position: "Partner",
     social_link: [
       {
         id: 1,

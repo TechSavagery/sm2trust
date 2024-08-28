@@ -32,7 +32,7 @@ const BottomNavbar = ({ linkColor }) => {
             <div className='bottom-navbar flex justify-between items-center'>
                 <div>
                     <Link href="/" className={cn(`logo text-primary-foreground ${linkColor}`)}>
-                    <Image src={img} loading="lazy" width={100} height={30} />
+                    <Image src={img} loading="lazy" width={100} height={20} />
                     </Link>
                 </div>
                 <nav>
