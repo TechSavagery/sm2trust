@@ -30,8 +30,8 @@ import ServiceCard from "@/components/ui/cards/serviceCard";
 import AboutThree from "@/components/section/about/aboutThree";
 import Faq from "@/components/section/faq";
 import GeneralAbout from "@/components/section/about/generalAbout";
-import faq_img from "@/assets/images/grapes.jpg";
 import bg_banner from "@/assets/images/contact-image-2.jpg";
+import faq_img from "@/assets/images/grapes.jpg";
 
 const Home = () => {
   const [privacyAlertActive, setPrivacyAlertActive] = useState(false);
@@ -97,7 +97,7 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="blog-single pt-30">
+        <section className="blog-single pt-30 pb-30">
           <div>
             <Image src={bg_banner} loading="lazy" alt="img" />
             <div
@@ -202,8 +202,9 @@ const Home = () => {
           id="faq-anchor"
           style={{ position: "relative", top: "-100px" }}
         ></div>
-        <section id="faq">
+        <section className="pt-50" id="faq">
           {" "}
+          <Image src={faq_img} loading="lazy" alt="img" />
           <Faq className={"pb-20"} />
         </section>
 

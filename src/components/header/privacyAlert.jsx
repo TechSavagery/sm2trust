@@ -11,22 +11,26 @@ const PrivacyAlert = ({
   bg_muted,
 }) => {
   const handleButtonClick = (value) => {
-    localStorage.setItem("PrivacyPolicy", value);
-    setPrivacyAlertActive(false);
+    if ((value == "")) {
+      setPrivacyAlertActive(false);
+    } else {
+      localStorage.setItem("PrivacyPolicy", value);
+      setPrivacyAlertActive(false);
+    }
   };
 
   return (
     <div
       className={cn(
-        `py-100 w-full h-1/2 bg-secondary ${bg_muted} fixed z-40 ${
-          privacyAlertActive ? "bottom-0 visible " : "-bottom-[100%] invisible"
-        } left-0 transition-all duration-700`
+        `py-50 w-full min-h-[50vh] h-auto bg-secondary ${bg_muted} fixed z-40 ${
+          privacyAlertActive ? "bottom-0 visible" : "-bottom-[100%] invisible"
+        } left-0 transition-all duration-1200`
       )}
     >
       <div className="w-full relative">
         <button
-          onClick={() => handleButtonClick("reject")}
-          className="absolute right-10 top-10 text-secondary-foreground sm:hidden" // Hide on larger screens
+          onClick={() => handleButtonClick("")}
+          className="absolute right-10 top-10 text-secondary-foreground hidden sm:block"
         >
           <CloseIcon />
         </button>
@@ -46,7 +50,7 @@ const PrivacyAlert = ({
           Terms of Use.
         </p>
 
-        <div className="mt-[70px] flex flex-col sm:flex-row sm:justify-center sm:space-x-4">
+        <div className="mt-[70px] flex flex-row justify-center space-x-2 flex-wrap sm:flex-nowrap">
           <Link
             href={""}
             className="inline-block mt-4 sm:mt-0 flex-grow sm:flex-grow-0"
@@ -76,7 +80,7 @@ const PrivacyAlert = ({
           <Link
             href={""}
             className="inline-block mt-4 sm:mt-0 flex-grow sm:flex-grow-0"
-            onClick={() => handleButtonClick("reject")}
+            onClick={() => handleButtonClick("")}
           >
             <ButtonOutline
               className={
