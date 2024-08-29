@@ -38,13 +38,13 @@ const TeamCardOne = ({ img, social_link, name, position, text_muted, cardVariant
             <span className='w-[1px] h-full bg-[#253B2F4D] block absolute left-2'></span>
             <span className='w-[1px] h-full bg-[#253B2F4D] block absolute right-2'></span>
           </div>
-          <Link href={"/team-single"} className='flex items-center justify-between px-[27px] pt-[9px] pb-[18px]'>
+          <div href={""} className='flex items-center justify-between px-[27px] pt-[9px] pb-[18px]'>
             <label>
               <span className={cn(`text-2xl font-bold leading-160 text-primary-foreground cursor-pointer ${text_muted}`)}>{name}</span>
               <small className={cn(`text-primary-foreground text-lg block ${text_muted}`)}>{position}</small>
             </label>
             <small className='text-primary-foreground mt-2.5 flex items-center gap-3 transition-all duration-500 opacity-0 group-hover:opacity-100'> <RightArrow width={"35"} height={"21"} /> </small>
-          </Link>
+          </div>
         </div>
       </div>
     </motion.div>
