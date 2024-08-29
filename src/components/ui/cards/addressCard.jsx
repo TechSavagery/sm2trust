@@ -17,6 +17,7 @@ const AddressCard = ({ id, address, company, country, email, phone, lat_lng }) =
             </div>
             <div className='mt-5 mb-7.5'>
                 <Link href={`tel:${phone}`} className='hover-underline inline-block'><b className='font-normal'>Phone: </b><span>{phone}</span></Link>
+                <br/>
                 <Link href={`mailto:${email}`} className='hover-underline inline-block'><b className='font-normal'>Email: </b><span>{email}</span></Link>
             </div>
             <p onClick={()=>setMapDirection(lat_lng)} className='inline-flex items-center gap-3 text-xl font-bold cursor-pointer relative after:contents=[""] after:absolute after:left-0 after:-bottom-1 after:w-full after:h-[2px] after:bg-primary '>

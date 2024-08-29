@@ -1,14 +1,12 @@
+"use client";
+import { useState } from "react";
+import Head from "next/head";
 import dynamic from "next/dynamic";
-import Image from "next/image";
-
 import AddressCard from "@/components/ui/cards/addressCard";
 import SectionTitle from "@/components/ui/sectionTitle";
 import { addressList } from "@/lib/fakeData/addressList";
 import InputFiled from "@/components/ui/inputFiled";
 import TextAreaFiled from "@/components/ui/textAreaFiled";
-import RightArrow from "@/assets/icons/rightArrow";
-import from_img from "@/assets/images/contact-image-3.jpg";
-import Feedback from "@/components/section/feedback";
 import ButtonOutline from "@/components/ui/buttons/buttonOutline";
 
 const LeafletMap = dynamic(() => import("@/components/ui/leafletMap"), {
@@ -16,17 +14,61 @@ const LeafletMap = dynamic(() => import("@/components/ui/leafletMap"), {
   ssr: false,
 });
 
-export const metadata = {
-  title: "SM2rust - Contact",
-  description: "Conservator & Trustee Services",
-};
-
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const [sent, setSent] = useState(false);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch("/api/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSent(true);
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+
+        setTimeout(() => setSent(false), 5000);
+      } else {
+        alert("Failed to send the message. Please try again.");
+      }
+    } catch (error) {
+      alert("An error occurred. Please try again later.");
+    }
+  };
+
   return (
     <>
+      <Head>
+        <title>SM2rust - Contact</title>
+        <meta name="description" content="Conservator & Trustee Services" />
+      </Head>
       {/* ------ address and map start */}
       <section>
-        <div className="container-fluid ">
+        <div className="container-fluid">
           <SectionTitle
             sectionName={"Contact"}
             sectionTitle={"Let's Work Together"}
@@ -63,48 +105,69 @@ const Contact = () => {
 
       {/* ------ contact form start */}
       <section>
-        <div className="container lg:pt-30 2sm:pt-20 pt-14">
+        <div className="container lg:pt-30 2sm:pt-20 pt-14 pb-20">
           <div className="grid lg:grid-cols-1 gap-5">
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className="flex sm:flex-row flex-col gap-x-5">
                 <InputFiled
-                  placeholderc={"First Name"}
-                  type={"text"}
-                  className={"mb-[13px]"}
+                  name="firstName"
+                  placeholderc="First Name"
+                  type="text"
+                  value={formData.firstName}
+                  onChange={handleInputChange}
+                  className="mb-[13px]"
                 />
                 <InputFiled
-                  placeholderc={"Last Name"}
-                  type={"text"}
-                  className={"mb-[13px]"}
+                  name="lastName"
+                  placeholderc="Last Name"
+                  type="text"
+                  value={formData.lastName}
+                  onChange={handleInputChange}
+                  className="mb-[13px]"
                 />
               </div>
               <div className="flex sm:flex-row flex-col gap-x-5">
                 <InputFiled
-                  placeholderc={"Your Email"}
-                  type={"email"}
-                  className={"mb-[13px]"}
+                  name="email"
+                  placeholderc="Your Email"
+                  type="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  className="mb-[13px]"
                 />
                 <InputFiled
-                  placeholderc={"Subject"}
-                  type={"text"}
-                  className={"mb-[13px]"}
+                  name="subject"
+                  placeholderc="Subject"
+                  type="text"
+                  value={formData.subject}
+                  onChange={handleInputChange}
+                  className="mb-[13px]"
                 />
               </div>
               <TextAreaFiled
-                placeholder={"Type your massage"}
-                className={"min-h-[223px] mb-[13px]"}
+                name="message"
+                placeholder="Type your message"
+                value={formData.message}
+                onChange={handleInputChange}
+                className="min-h-[223px] mb-[13px]"
               />
-              <div className="flex justify-end">
-                <ButtonOutline>
-                  Send Message <RightArrow height={"22"} width={"35"} />
-                </ButtonOutline>
+              <div className="flex justify-between">
+                {sent ? (
+                  <button
+                    className="border border-green-500 text-green-500 px-6 py-2 rounded"
+                    type="button"
+                    disabled
+                  >
+                    Sent
+                  </button>
+                ) : null}
+                <ButtonOutline type="submit">Send Message</ButtonOutline>
               </div>
             </form>
           </div>
         </div>
       </section>
       {/* ------ contact form end */}
-      <Feedback />
     </>
   );
 };
