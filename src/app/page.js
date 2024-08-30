@@ -77,7 +77,12 @@ const Home = () => {
             />
           </div>
         </section>
-        <div id="services" className="container-fluid lg:pt-20 2sm:pt-16 pt-10">
+
+        {/* -------- Services Section -------- */}
+        <section
+          id="services"
+          className="offset-section container-fluid lg:pt-20 2sm:pt-16 pt-10"
+        >
           <div className="grid 2xl:grid-cols-3 lg:grid-cols-3 sm:grid-cols-2 gap-8 px-4 2sm:px-0">
             {servicesData.map(({ id, service_desc, service_name, link }) => (
               <ServiceCard
@@ -89,11 +94,13 @@ const Home = () => {
               />
             ))}
           </div>
-        </div>
-        <section className="blog-single pt-40 pb-40">
+        </section>
+
+        {/* -------- About Section -------- */}
+        <section id="about" className="offset-section blog-single pt-40 pb-40">
           <div>
             <Image src={bg_banner} loading="lazy" alt="img" />
-            <div className="container 2sm:mt-[156px] sm:mt-30 mt-20">
+            <div className="container 2sm:mt-[120px] sm:mt-[80px] mt-[60px]">
               <div className="grid lg:grid-cols-[65%_auto] gap-[38px]">
                 <div className="relative after:absolute sm:after:-left-12.5 after:-left-5 after:top-1/2 after:-translate-y-1/2 after:w-[1px] sm:after:h-[130%] after:h-[120%] after:bg-primary sm:ml-12.5 ml-5">
                   <h1 className="text-primary-foreground [font-size:_clamp(48px,7vw,130px)] font-extrabold leading-110">
@@ -130,68 +137,78 @@ const Home = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
 
-            <div className="container 2sm:mt-[156px] sm:mt-30 mt-20 pt-40">
-              <div className="grid lg:grid-cols-[65%_auto] gap-[38px]">
-                <div className="relative after:absolute sm:after:-left-12.5 after:-left-5 after:top-1/2 after:-translate-y-1/2 after:w-[1px] sm:after:h-[130%] after:h-[120%] after:bg-primary sm:ml-12.5 ml-5">
-                  <h1 className="text-primary-foreground [font-size:_clamp(48px,7vw,130px)] font-extrabold leading-110">
-                    Methodology
-                  </h1>
-                  <span className="inline-block w-[300px] h-[1px] bg-primary"></span>
-                  <p className="text-base sm:text-lg 2sm:text-lg !leading-160 text-primary-foreground mt-[18px]">
-                    Of paramount importance to the fiduciary is a complete and
-                    thorough understanding of the client’s wishes. Partners
-                    McConnell and Maguire begin by cultivating a deep
-                    understanding of the client’s wishes, expectations, hopes,
-                    dreams, and fears. Attention is paid to the personal,
-                    familial, and spiritual beliefs of the client. Above all,
-                    SM2 fiduciaries are charged with respecting the client’s
-                    wishes first and foremost.
-                  </p>
-                  <p className="text-base sm:text-lg 2sm:text-lg !leading-160 text-primary-foreground mt-[18px]">
-                    SM2 will also work with family members, friends, attorneys,
-                    and religious leaders in an attempt to understand each
-                    individual client. Documents, such as trusts, wills,
-                    powers-of-attorney, and health care directives, also provide
-                    essential information in this process.
-                  </p>
-                  <p className="text-base sm:text-lg 2sm:text-lg !leading-160 text-primary-foreground mt-[18px]">
-                    SM2 fiduciaries will include the client in as many decisions
-                    as can be accommodated while acting as non-invasively as
-                    possible. SM2 fiduciaries act exclusively in the best
-                    interest of both the client’s person and estate.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="container 2sm:mt-[156px] sm:mt-30 mt-20">
-              <div className="grid lg:grid-cols-[65%_auto] gap-[38px]">
-                <div className="relative after:absolute sm:after:-left-12.5 after:-left-5 after:top-1/2 after:-translate-y-1/2 after:w-[1px] sm:after:h-[130%] after:h-[120%] after:bg-primary sm:ml-12.5 ml-5">
-                  <h1 className="text-primary-foreground [font-size:_clamp(48px,7vw,130px)] font-extrabold leading-110">
-                    Mission Statement
-                  </h1>
-                  <span className="inline-block w-[300px] h-[1px] bg-primary"></span>
-                  <p className="text-2xl sm:text-3xl 2sm:text-4xl !leading-160 text-primary-foreground mt-[18px]">
-                    We provide attentive personal care and prudent financial
-                    management to clients under fiduciary standards of
-                    responsibility, transparency, confidentiality, and
-                    integrity.
-                  </p>
-                </div>
-              </div>
+        {/* -------- Methodology Section -------- */}
+        <section
+          id="methodology"
+          className="offset-section container 2sm:mt-[156px] sm:mt-30 mt-20 pt-40"
+        >
+          <div className="grid lg:grid-cols-[65%_auto] gap-[38px]">
+            <div className="relative after:absolute sm:after:-left-12.5 after:-left-5 after:top-1/2 after:-translate-y-1/2 after:w-[1px] sm:after:h-[130%] after:h-[120%] after:bg-primary sm:ml-12.5 ml-5">
+              <h1 className="text-primary-foreground [font-size:_clamp(48px,7vw,130px)] font-extrabold leading-110">
+                Methodology
+              </h1>
+              <span className="inline-block w-[300px] h-[1px] bg-primary"></span>
+              <p className="text-base sm:text-lg 2sm:text-lg !leading-160 text-primary-foreground mt-[18px]">
+                Of paramount importance to the fiduciary is a complete and
+                thorough understanding of the client’s wishes. Partners
+                McConnell and Maguire begin by cultivating a deep understanding
+                of the client’s wishes, expectations, hopes, dreams, and fears.
+                Attention is paid to the personal, familial, and spiritual
+                beliefs of the client. Above all, SM2 fiduciaries are charged
+                with respecting the client’s wishes first and foremost.
+              </p>
+              <p className="text-base sm:text-lg 2sm:text-lg !leading-160 text-primary-foreground mt-[18px]">
+                SM2 will also work with family members, friends, attorneys, and
+                religious leaders in an attempt to understand each individual
+                client. Documents, such as trusts, wills, powers-of-attorney,
+                and health care directives, also provide essential information
+                in this process.
+              </p>
+              <p className="text-base sm:text-lg 2sm:text-lg !leading-160 text-primary-foreground mt-[18px]">
+                SM2 fiduciaries will include the client in as many decisions as
+                can be accommodated while acting as non-invasively as possible.
+                SM2 fiduciaries act exclusively in the best interest of both the
+                client’s person and estate.
+              </p>
             </div>
           </div>
         </section>
-        {/* <AboutThree /> */}
-        {/* <Counter />
-        <Gallery />
-        <ServicesSlider /> */}
 
-        {/* --------- start team section */}
+        {/* -------- Mission Statement Section -------- */}
+        <section
+          id="mission"
+          className="offset-section container 2sm:mt-[156px] sm:mt-30 mt-20 pt-40 pb-40"
+        >
+          <div className="grid lg:grid-cols-[65%_auto] gap-[38px]">
+            <div className="relative after:absolute sm:after:-left-12.5 after:-left-5 after:top-1/2 after:-translate-y-1/2 after:w-[1px] sm:after:h-[130%] after:h-[120%] after:bg-primary sm:ml-12.5 ml-5">
+              <h1 className="text-primary-foreground [font-size:_clamp(48px,7vw,130px)] font-extrabold leading-110">
+                Mission Statement
+              </h1>
+              <span className="inline-block w-[300px] h-[1px] bg-primary"></span>
+              <p className="text-base sm:text-lg 2sm:text-lg !leading-160 text-primary-foreground mt-[18px]">
+                SM2’s primary mission is to relieve their clients of burdens so
+                they can live fulfilling lives in comfort and dignity. Shelley
+                M. McConnell and Stephen P. Maguire do not take this mission
+                lightly. Their personal belief is that by making a positive
+                impact on clients’ lives, they will impact their own lives in
+                positive and meaningful ways.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* -------- FAQ Section -------- */}
         <Image src={faq_img} loading="lazy" alt="img" />
-        <Faq className={"pb-20"} />
-        <section className="pt-20">
+
+        <section id="faq" className="offset-section">
+          <Faq className={"pb-20"} />
+        </section>
+
+        {/* -------- Team Section -------- */}
+        <section id="team" className="pt-20">
           <div className="container-fluid ">
             <SectionTitle
               sectionName={"Team"}
@@ -201,7 +218,7 @@ const Home = () => {
               }
             />
           </div>
-          <div className="container lg:pt-30 2sm:pt-20 pt-14">
+          <div  className="container lg:pt-30 2sm:pt-20 pt-14">
             <div className="grid lg:grid-cols-3 2sm:grid-cols-2 gap-7">
               {teamData.map(
                 ({ id, img, firstName, lastName, position, social_link }) => (
@@ -223,14 +240,8 @@ const Home = () => {
             </div>
           </div>
         </section>
-        {/* --------- end team section */}
-
-        {/* <ProjectsSlider />
-        <Testimonial />
-        <ShopSlider data={productData.slice(0, 5)} /> */}
-
         {/* -------- blog slider start */}
-        <section className="pt-20">
+        <section id="blog" className="pt-20">
           <div className="container-fluid ">
             <SectionTitle
               sectionName={"Blog"}
@@ -242,18 +253,10 @@ const Home = () => {
             <BlogSlider data={blogData.slice(0, 4)} />
           </div>
         </section>
-        {/* -------- blog slider end */}
-
-        <Feedback />
+        <Feedback/>
       </main>
       <Footer />
-      {privacyAlertActive && (
-        <PrivacyAlert
-          setPrivacyAlertActive={setPrivacyAlertActive}
-          privacyAlertActive={privacyAlertActive}
-          bg_muted={"bg-muted"}
-        />
-      )}
+      {privacyAlertActive && <PrivacyAlert />}
     </>
   );
 };

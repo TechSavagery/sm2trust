@@ -41,7 +41,7 @@ const TeamSingle = () => {
           <div className="grid xl:grid-cols-[auto_538px] lg:grid-cols-[auto_350px] md:grid-cols-[auto_400px] 2xl:gap-[132px] gap-16 items-start">
             <div>
               <div className="mb-12.5">
-                <Title title_text="Brief Bio:" />
+                <Title title_text="Bio:" />
                 <p>
                   SM2 partner Stephen P. Maguire, a native of Arroyo Grande, has
                   been involved with the financial industry since 1972 in a

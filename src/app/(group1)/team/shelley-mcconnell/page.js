@@ -42,7 +42,7 @@ const TeamSingle = () => {
           <div className="grid xl:grid-cols-[auto_538px] lg:grid-cols-[auto_350px] md:grid-cols-[auto_400px] 2xl:gap-[132px] gap-16 items-start">
             <div>
               <div className="mb-12.5">
-                <Title title_text="Brief Bio:" />
+                <Title title_text="Bio:" />
                 <p>
                   SM2 partner Shelley M. McConnell, a native of Reedley,
                   California, has lived on the Central Coast for 20 years. She

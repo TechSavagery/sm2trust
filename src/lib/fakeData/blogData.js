@@ -16,6 +16,7 @@ export const blogData = [
         date:"14 January 22",
         tag:"Conservatorship, Test",
         title:`Could Netflix's "I Care Alot" Happen in Real Life?`,
-        desc:""
+        desc:"", 
+        link:"/blog/avoiding-the-reality-of-i-care-a-lot"
     },
 ]
