@@ -31,7 +31,7 @@ import AboutThree from "@/components/section/about/aboutThree";
 import Faq from "@/components/section/faq";
 import GeneralAbout from "@/components/section/about/generalAbout";
 import faq_img from "@/assets/images/grapes.jpg";
-import bg_banner from "@/assets/images/project-hero-image.jpg";
+import bg_banner from "@/assets/images/contact-image-2.jpg";
 
 const Home = () => {
   const [privacyAlertActive, setPrivacyAlertActive] = useState(false);
@@ -77,7 +77,7 @@ const Home = () => {
             />
           </div>
         </section>
-        <div className="container-fluid lg:pt-20 2sm:pt-16 pt-10">
+        <div id="services" className="container-fluid lg:pt-20 2sm:pt-16 pt-10">
           <div className="grid 2xl:grid-cols-3 lg:grid-cols-3 sm:grid-cols-2 gap-8 px-4 2sm:px-0">
             {servicesData.map(({ id, service_desc, service_name, link }) => (
               <ServiceCard
@@ -90,7 +90,7 @@ const Home = () => {
             ))}
           </div>
         </div>
-        <section className="blog-single">
+        <section className="blog-single pt-40 pb-40">
           <div>
             <Image src={bg_banner} loading="lazy" alt="img" />
             <div className="container 2sm:mt-[156px] sm:mt-30 mt-20">
@@ -169,14 +169,14 @@ const Home = () => {
               <div className="grid lg:grid-cols-[65%_auto] gap-[38px]">
                 <div className="relative after:absolute sm:after:-left-12.5 after:-left-5 after:top-1/2 after:-translate-y-1/2 after:w-[1px] sm:after:h-[130%] after:h-[120%] after:bg-primary sm:ml-12.5 ml-5">
                   <h1 className="text-primary-foreground [font-size:_clamp(48px,7vw,130px)] font-extrabold leading-110">
-                    Mission
+                    Mission Statement
                   </h1>
                   <span className="inline-block w-[300px] h-[1px] bg-primary"></span>
                   <p className="text-2xl sm:text-3xl 2sm:text-4xl !leading-160 text-primary-foreground mt-[18px]">
-                    The design of this apartment facing Ipanema beach, in Rio de
-                    Janeiro, was designed for a couple with two young children,
-                    who wanted a space to accompany their daughters' growth and
-                    also environments with privacy for home office work.
+                    We provide attentive personal care and prudent financial
+                    management to clients under fiduciary standards of
+                    responsibility, transparency, confidentiality, and
+                    integrity.
                   </p>
                 </div>
               </div>
@@ -189,6 +189,7 @@ const Home = () => {
         <ServicesSlider /> */}
 
         {/* --------- start team section */}
+        <Image src={faq_img} loading="lazy" alt="img" />
         <Faq className={"pb-20"} />
         <section className="pt-20">
           <div className="container-fluid ">
@@ -224,7 +225,6 @@ const Home = () => {
         </section>
         {/* --------- end team section */}
 
-        <VideoPortfolio />
         {/* <ProjectsSlider />
         <Testimonial />
         <ShopSlider data={productData.slice(0, 5)} /> */}
