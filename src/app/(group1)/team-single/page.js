@@ -34,7 +34,7 @@ const TeamSingle = () => {
                 <Title title_text={"Brief Bio:"} />
                 <p>Russell Otten, the Interior Alchemist at Architronix, adds a touch of magic to spaces. With over a decade of experience, Russell blends artistic flair with a deep understanding of client aspirations.</p>
               </div>
-              <div className='pt-12.5'>
+              {/* <div className='pt-12.5'>
                 <Title title_text={"Expertise and Specializations:"} />
                 <ul>
                   <li>
@@ -100,23 +100,21 @@ const TeamSingle = () => {
                   </li>
 
                 </ul>
-              </div>
+              </div> */}
             </div>
             <div className='sticky top-16'>
               <Image src={team_img} loading='lazy'      alt='Russell Otten' className='w-full' />
-              <Link href={""} className='mt-11 inline-block'>
-                <ButtonOutline className={"after:left-0"}>Connect to Linkedin <RightArrow width={"53"} height={"22"} /></ButtonOutline>
-              </Link>
+             
             </div>
           </div>
         </div>
       </section>
-      <div className='container pt-20'>
+      {/* <div className='container pt-20'>
         <h2 className='[font-size:_clamp(40px,7vw,90px)] text-primary-foreground font-extrabold leading-120 max-w-[651px]'>Portfolio Showcase:</h2>
         <div className='grid lg:grid-cols-3 2sm:grid-cols-2 gap-5 pt-10'>
           {teamData[0].portfolio.map(({ id, img, link, project_name }) => <ProjectCardThree key={id} img={img} project_name={project_name} />)}
         </div>
-      </div>
+      </div> */}
       <Feedback />
     </>
   )

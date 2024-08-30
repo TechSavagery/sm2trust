@@ -30,8 +30,8 @@ import ServiceCard from "@/components/ui/cards/serviceCard";
 import AboutThree from "@/components/section/about/aboutThree";
 import Faq from "@/components/section/faq";
 import GeneralAbout from "@/components/section/about/generalAbout";
-import bg_banner from "@/assets/images/contact-image-2.jpg";
 import faq_img from "@/assets/images/grapes.jpg";
+import bg_banner from "@/assets/images/project-hero-image.jpg";
 
 const Home = () => {
   const [privacyAlertActive, setPrivacyAlertActive] = useState(false);
@@ -77,34 +77,23 @@ const Home = () => {
             />
           </div>
         </section>
-        <div
-          id="services-anchor"
-          style={{ position: "relative", top: "-100px" }}
-        ></div>
-        <section id="services">
-          <div className="container-fluid lg:pt-20 2sm:pt-16 pt-10">
-            <div className="grid 2xl:grid-cols-3 lg:grid-cols-3 sm:grid-cols-2 gap-8 px-4 2sm:px-0">
-              {servicesData.map(({ id, service_desc, service_name, link }) => (
-                <ServiceCard
-                  key={id}
-                  id={id}
-                  service_desc={service_desc}
-                  service_name={service_name}
-                  link={link}
-                />
-              ))}
-            </div>
+        <div className="container-fluid lg:pt-20 2sm:pt-16 pt-10">
+          <div className="grid 2xl:grid-cols-3 lg:grid-cols-3 sm:grid-cols-2 gap-8 px-4 2sm:px-0">
+            {servicesData.map(({ id, service_desc, service_name, link }) => (
+              <ServiceCard
+                key={id}
+                id={id}
+                service_desc={service_desc}
+                service_name={service_name}
+                link={link}
+              />
+            ))}
           </div>
-        </section>
-
-        <section className="blog-single pt-30 pb-30">
+        </div>
+        <section className="blog-single">
           <div>
             <Image src={bg_banner} loading="lazy" alt="img" />
-            <div
-              id="about-anchor"
-              style={{ position: "relative", top: "-100px" }}
-            ></div>
-            <div id="about" className="container 2sm:mt-[156px] sm:mt-30 mt-20">
+            <div className="container 2sm:mt-[156px] sm:mt-30 mt-20">
               <div className="grid lg:grid-cols-[65%_auto] gap-[38px]">
                 <div className="relative after:absolute sm:after:-left-12.5 after:-left-5 after:top-1/2 after:-translate-y-1/2 after:w-[1px] sm:after:h-[130%] after:h-[120%] after:bg-primary sm:ml-12.5 ml-5">
                   <h1 className="text-primary-foreground [font-size:_clamp(48px,7vw,130px)] font-extrabold leading-110">
@@ -176,18 +165,18 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="container 2sm:mt-[156px] sm:mt-30 mt-20 pt-40">
+            <div className="container 2sm:mt-[156px] sm:mt-30 mt-20">
               <div className="grid lg:grid-cols-[65%_auto] gap-[38px]">
                 <div className="relative after:absolute sm:after:-left-12.5 after:-left-5 after:top-1/2 after:-translate-y-1/2 after:w-[1px] sm:after:h-[130%] after:h-[120%] after:bg-primary sm:ml-12.5 ml-5">
                   <h1 className="text-primary-foreground [font-size:_clamp(48px,7vw,130px)] font-extrabold leading-110">
-                    Mission Statement
+                    Miossion
                   </h1>
                   <span className="inline-block w-[300px] h-[1px] bg-primary"></span>
                   <p className="text-2xl sm:text-3xl 2sm:text-4xl !leading-160 text-primary-foreground mt-[18px]">
-                    We provide attentive personal care and prudent financial
-                    management to clients under a fiduciary standards of
-                    responsibility, transparency, confidentiality, and
-                    integrity.
+                    The design of this apartment facing Ipanema beach, in Rio de
+                    Janeiro, was designed for a couple with two young children,
+                    who wanted a space to accompany their daughters' growth and
+                    also environments with privacy for home office work.
                   </p>
                 </div>
               </div>
@@ -198,22 +187,10 @@ const Home = () => {
         {/* <Counter />
         <Gallery />
         <ServicesSlider /> */}
-        <div
-          id="faq-anchor"
-          style={{ position: "relative", top: "-100px" }}
-        ></div>
-        <section className="pt-50" id="faq">
-          {" "}
-          <Image src={faq_img} loading="lazy" alt="img" />
-          <Faq className={"pb-20"} />
-        </section>
 
         {/* --------- start team section */}
-        <div
-          id="team-anchor"
-          style={{ position: "relative", top: "-100px" }}
-        ></div>
-        <section id="team" className="pt-20">
+        <Faq className={"pb-20"} />
+        <section className="pt-20">
           <div className="container-fluid ">
             <SectionTitle
               sectionName={"Team"}
@@ -225,32 +202,35 @@ const Home = () => {
           </div>
           <div className="container lg:pt-30 2sm:pt-20 pt-14">
             <div className="grid lg:grid-cols-3 2sm:grid-cols-2 gap-7">
-              {teamData.map(({ id, img, name, position, social_link }) => (
-                <TeamCardOne
-                  key={id}
-                  img={img}
-                  name={name}
-                  position={position}
-                  social_link={social_link}
-                />
-              ))}
+              {teamData.map(
+                ({ id, img, firstName, lastName, position, social_link }) => (
+                  <TeamCardOne
+                    key={id}
+                    img={img}
+                    name={firstName + " " + lastName}
+                    position={position}
+                    social_link={social_link}
+                    link={
+                      "/team/" +
+                      firstName.toLowerCase() +
+                      "-" +
+                      lastName.toLowerCase()
+                    }
+                  />
+                )
+              )}
             </div>
           </div>
         </section>
         {/* --------- end team section */}
 
-        {/* <VideoPortfolio /> */}
+        <VideoPortfolio />
         {/* <ProjectsSlider />
         <Testimonial />
         <ShopSlider data={productData.slice(0, 5)} /> */}
 
         {/* -------- blog slider start */}
-        {/* --------- start team section */}
-        <div
-          id="blog-anchor"
-          style={{ position: "relative", top: "-100px" }}
-        ></div>
-        <section id="blog" className="pt-20">
+        <section className="pt-20">
           <div className="container-fluid ">
             <SectionTitle
               sectionName={"Blog"}

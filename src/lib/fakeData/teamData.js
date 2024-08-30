@@ -16,8 +16,10 @@ export const teamData = [
   {
     id: 1,
     img: team_1,
-    name: "Stephen Maguire",
+    firstName: "Stephen",
+    lastName: "Maguire",
     position: "Partner",
+    bio: ``,
     social_link: [
       {
         id: 1,
@@ -76,8 +78,10 @@ export const teamData = [
   {
     id: 2,
     img: team_2,
-    name: "Shelley McConnell",
+    firstName: "Shelley",
+    lastName: "McConnell",
     position: "Partner",
+    bio: ``,
     social_link: [
       {
         id: 1,
