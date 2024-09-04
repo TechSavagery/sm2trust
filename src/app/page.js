@@ -34,7 +34,7 @@ import faq_img from "@/assets/images/grapes.jpg";
 import bg_banner from "@/assets/images/contact-image-2.jpg";
 
 const Home = () => {
-  const [privacyAlertActive, setPrivacyAlertActive] = useState(false);
+  const [privacyAlertActive, setPrivacyAlertActive] = useState(true);
 
   useEffect(() => {
     const privacyPolicy = localStorage.getItem("PrivacyPolicy");
@@ -218,7 +218,7 @@ const Home = () => {
               }
             />
           </div>
-          <div  className="container lg:pt-30 2sm:pt-20 pt-14">
+          <div className="container lg:pt-30 2sm:pt-20 pt-14">
             <div className="grid lg:grid-cols-3 2sm:grid-cols-2 gap-7">
               {teamData.map(
                 ({ id, img, firstName, lastName, position, social_link }) => (
@@ -253,10 +253,16 @@ const Home = () => {
             <BlogSlider data={blogData.slice(0, 4)} />
           </div>
         </section>
-        <Feedback/>
+        <Feedback />
       </main>
       <Footer />
-      {privacyAlertActive && <PrivacyAlert />}
+      {privacyAlertActive && (
+        <PrivacyAlert
+          setPrivacyAlertActive={setPrivacyAlertActive}
+          privacyAlertActive={privacyAlertActive}
+          bg_muted={"bg-muted"}
+        />
+      )}
     </>
   );
 };

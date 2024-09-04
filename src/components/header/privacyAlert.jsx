@@ -11,7 +11,7 @@ const PrivacyAlert = ({
   bg_muted,
 }) => {
   const handleButtonClick = (value) => {
-    if ((value == "")) {
+    if (value == "") {
       setPrivacyAlertActive(false);
     } else {
       localStorage.setItem("PrivacyPolicy", value);
@@ -46,8 +46,15 @@ const PrivacyAlert = ({
           marketing. By clicking Accept, you agree to our use of these
           technologies. Please note that if you click Reject, strictly necessary
           cookies will still be operational in order for our site to function
-          properly. For more information, please visit our Privacy Policy &
-          Terms of Use.
+          properly. For more information, please visit our
+          <Link href="/privacy-use" className="font-bold underline mx-1">
+            Privacy Policy
+          </Link>{" "}
+          &
+          <Link href="/terms-of-use" className="font-bold underline mx-1">
+            Terms of Use
+          </Link>
+          .
         </p>
 
         <div className="mt-[70px] flex flex-row justify-center space-x-2 flex-wrap sm:flex-nowrap">

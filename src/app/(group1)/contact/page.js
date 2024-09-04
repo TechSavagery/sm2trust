@@ -144,13 +144,31 @@ const Contact = () => {
                   className="mb-[13px]"
                 />
               </div>
-              <TextAreaFiled
-                name="message"
-                placeholder="Type your message"
-                value={formData.message}
-                onChange={handleInputChange}
-                className="min-h-[223px] mb-[13px]"
-              />
+              <div className="mb-[13px]">
+                <TextAreaFiled
+                  name="message"
+                  placeholder="Type your message here..."
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  className="min-h-[223px]"
+                />
+                <p className="mb-2">
+                  By sending us a message, you agree to our
+                  <a href="/privacy-policy" className="text-blue-500 underline">
+                    {" "}
+                    Privacy Policy
+                  </a>{" "}
+                  and
+                  <a
+                    href="/terms-of-use"
+                    className="text-blue-500 underline"
+                  >
+                    {" "}
+                    Terms of Use
+                  </a>
+                  .
+                </p>
+              </div>
               <div className="flex justify-between">
                 {sent ? (
                   <button
