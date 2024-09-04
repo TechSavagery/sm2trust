@@ -1,6 +1,7 @@
 // app/privacy-policy/page.tsx
 
 import React from "react";
+import Link from "next/link";
 
 const PrivacyPolicy = () => {
   return (
@@ -8,7 +9,7 @@ const PrivacyPolicy = () => {
       <h1 className="text-3xl font-bold mb-6">
         SM2 Fiduciary LLC Privacy Policy
       </h1>
-      <p className="mb-4">Last Updated: September XX, 2024</p>
+      <p className="mb-4">Last Updated: September 03, 2024</p>
 
       <p className="mb-4">
         SM2 Fiduciary LLC (“Company,” “we,” or “us”) provides fiduciary services
@@ -38,7 +39,7 @@ const PrivacyPolicy = () => {
         THE TERMS OF THIS PRIVACY POLICY AND OUR TERMS OF USE.
       </p>
 
-      <h2 className="text-2xl font-semibold mt-8 mb-4">Scope</h2>
+      <h2 className="text-2xl font-semibold mt-8 mb-4">2. Scope</h2>
 
       <p className="mb-4">
         This Privacy Policy applies to personal information that Company
@@ -62,7 +63,7 @@ const PrivacyPolicy = () => {
       </p>
 
       <h2 className="text-2xl font-semibold mt-8 mb-4">
-        The Types and Categories of Personal Information We Collect
+        2. The Types and Categories of Personal Information We Collect
       </h2>
 
       <p className="mb-4">
@@ -190,7 +191,7 @@ const PrivacyPolicy = () => {
       </table>
 
       <h2 className="text-2xl font-semibold mt-8 mb-4">
-        Collection of Technical/Online Data
+        3. Collection of Technical/Online Data
       </h2>
 
       <p className="mb-4">
@@ -213,6 +214,172 @@ const PrivacyPolicy = () => {
         data and logs, performance data (e.g. launch time, hang rate, or energy
         use),
       </p>
+
+      <p className="mb-4">
+        <strong>Cookies and Tracking Data; Social Media.</strong>  We use
+        “cookies” and other tracking technologies within the Site. A cookie is a
+        small file placed on your smartphone or other device. It may be possible
+        to refuse to accept cookies by activating the appropriate setting on
+        your smartphone or device. However, if you select this setting, some
+        parts of the Site may become inaccessible or not function properly. In
+        addition, the Site may contain small electronic files known as web
+        beacons (also referred to as clear gifs, pixel tags, and single- pixel
+        gifs) that permit us to analyze data on your use of the Site (e.g.,
+        recording the popularity of certain content and verifying system and
+        server integrity). The Site may collect data about the advertisements
+        you have seen or engaged. For more information, see, where
+        available, the Cookie Policy on each Site. From time to time, we may use
+        on our Site certain third-party cookies and pixels provided by our
+        marketing partners, including social media companies. To the extent we
+        use such third-party cookies and pixels, you hereby agree to the terms
+        and conditions set forth by those third parties, which may include Meta,
+        X (formerly Twitter), TikTok, and LinkedIn, among others.
+      </p>
+
+      <p className="mb-4">
+        <strong>Site Monitoring.</strong> Please be aware that we, and our
+        service providers and partners, use cookies and other tracking
+        technologies within the Site to monitor and record any and all
+        activities and communications to, from, and on, the Site. For the
+        avoidance of doubt, you hereby acknowledge, agree, and consent to, such
+        monitoring and recording by us and our service providers and partners.
+      </p>
+
+      <p className="mb-4">
+        <strong>Non-Cookie Technologies.</strong> We may deploy on our Site
+        certain types of “Non-Cookie Technologies” provided by our service
+        providers to support our digital advertising programs.  These
+        technologies often include browser cache, locally stored objects, or the
+        creation of a statistical identifier wherein an identifier, much like a
+        cookie identifier, is calculated based on the characteristics of a
+        browser or device that distinguishes it from other browsers or devices.
+        These identifiers are calculated either from the data your browser or
+        device shares automatically or with additional data specifically
+        requested from your browser or device. For more information, see{" "}
+        <Link href={"https://thenai.org/non-cookie-technologies-faq/"}>
+          here
+        </Link>
+        .
+      </p>
+      <h2 className="text-2xl font-semibold mt-8 mb-4">
+        4. Sources of Information
+      </h2>
+      <p className="mb-4">
+        We collect personal information from the following sources: .
+      </p>
+      <p className="mb-4">
+        <strong>First Party / Direct Collection.</strong> We collect personal
+        information directly from you when you use our Services (e.g., ,
+        completing purchases, signing up for subscriptions) , or whenever you
+        directly engage with us, such as when you visit our offices or premises
+        or otherwise contact us. .
+      </p>
+      <p className="mb-4">
+        <strong>Automated Collection.</strong> As described above, we may
+        collect information and data, such as usage data and cookies, through
+        automated means when you use the Site (see “Technical Data” above).
+      </p>
+      <p className="mb-4">
+        <strong>Third-Party Sources.</strong>We also obtain data from
+        third-parties. These third-party sources vary over time, but they are
+        sources deemed credible by us and may be publicly available or available
+        on a commercial basis. They can include: data brokers from which we
+        purchase demographic data to supplement the data we collect; partners
+        with whom we offer branded products or engage in joint marketing
+        activities; fraud prevention agencies or credit reporting agencies in
+        connection with credit determinations, if applicable; publicly available
+        sources such as open government databases or other data in the public
+        domain; social networking providers; advertising companies; and,
+        third-party references. If you purchase our products from our
+        distributors and business partners, we may receive certain information
+        about your purchase from them.
+      </p>
+      <h2 className="text-2xl font-semibold mt-8 mb-4">
+        5. How We Use your Information / Purpose of Collection
+      </h2>
+      <p className="mb-4">
+        We may use the personal information we collect about you in order to
+        perform our Services, comply with our legal obligations, and promote our
+        business interests. Please see below for more information on how we use
+        personal information:{" "}
+      </p>
+
+      <table className="mb-8">
+        <thead>
+          <tr>
+            <th className="text-center p-2 border-b">
+              How We Use Personal Information
+            </th>{" "}
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td className="p-2 border-b">
+              Provide, operate, maintain, improve, and promote our Services.
+            </td>
+          </tr>
+          <tr>
+            <td className="p-2 border-b">
+              Enable you to access and use our Services.
+            </td>
+          </tr>
+          <tr>
+            <td className="p-2 border-b">
+              Process and complete transactions, and send you related
+              information, including purchase confirmations and invoices.
+            </td>
+          </tr>
+          <tr>
+            <td className="p-2 border-b">
+              Send you messages and communications related to our Services
+              (e.g., responses to your comments, questions, and requests,
+              customer services).
+            </td>
+          </tr>
+          <tr>
+            <td className="p-2 border-b">
+              Furnish technical notices, updates, security alerts, and support
+              and administrative messages to you about our Services.
+            </td>
+          </tr>
+          <tr>
+            <td className="p-2 border-b">
+              Provide you promotional and marketing communications (e.g.,
+              information about our Services, features, surveys, newsletters,
+              offers, promotions, contests, and events).
+            </td>
+          </tr>
+          <tr>
+            <td className="p-2 border-b">
+              Process and deliver contest or sweepstakes entries and rewards.
+            </td>
+          </tr>
+          <tr>
+            <td className="p-2 border-b">
+              Monitor and analyze trends, usage, and activities in connection
+              with our Services to promote our business interests.
+            </td>
+          </tr>
+          <tr>
+            <td className="p-2 border-b">
+              Investigate and prevent fraudulent transactions, unauthorized
+              access to or use of our Services, and other illegal activities.
+            </td>
+          </tr>
+          <tr>
+            <td className="p-2 border-b">
+              Personalize our Services, including providing features or
+              advertisements that match your interests and preferences.
+            </td>
+          </tr>
+          <tr>
+            <td className="p-2 border-b">
+              Company may collect and use your personal information for any
+              other purpose for which we obtain your consent.
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   );
 };

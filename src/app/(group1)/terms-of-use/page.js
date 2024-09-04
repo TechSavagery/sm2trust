@@ -8,7 +8,7 @@ const TermsOfService = () => {
       <h1 className="text-3xl font-bold mb-6">
         SM2 Fiduciary LLC Terms of Use
       </h1>
-      <p className="mb-4">Last Updated: September XX, 2024</p>
+      <p className="mb-4">Last Updated: September 03, 2024</p>
       <p className="mb-4">
         Thank you for your interest in SM2 Fiduciary LLC (“Company,” “we,” or
         “us”). These Terms of Use (“Terms”) apply to certain publicly available
