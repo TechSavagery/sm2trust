@@ -13,6 +13,18 @@ export default function sitemap() {
         priority: 0.8,
       },
       {
+        url: 'https://sm2trust.com/#methodology',
+        lastModified: new Date(),
+        changeFrequency: 'weekly',
+        priority: 0.8,
+      },
+      {
+        url: 'https://sm2trust.com/#mission-statement',
+        lastModified: new Date(),
+        changeFrequency: 'weekly',
+        priority: 0.8,
+      },
+      {
         url: 'https://sm2trust.com/#services',
         lastModified: new Date(),
         changeFrequency: 'weekly',
@@ -38,6 +50,18 @@ export default function sitemap() {
       },
       {
         url: 'https://sm2trust.com/#blog',
+        lastModified: new Date(),
+        changeFrequency: 'weekly',
+        priority: 0.3,
+      },
+      {
+        url: 'https://sm2trust.com/privacy-policy',
+        lastModified: new Date(),
+        changeFrequency: 'weekly',
+        priority: 0.3,
+      },
+      {
+        url: 'https://sm2trust.com/terms-of-use',
         lastModified: new Date(),
         changeFrequency: 'weekly',
         priority: 0.3,

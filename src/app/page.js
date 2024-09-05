@@ -179,7 +179,7 @@ const Home = () => {
 
         {/* -------- Mission Statement Section -------- */}
         <section
-          id="mission"
+          id="mission-statement"
           className="offset-section container 2sm:mt-[156px] sm:mt-30 mt-20 pt-40 pb-40"
         >
           <div className="grid lg:grid-cols-[65%_auto] gap-[38px]">

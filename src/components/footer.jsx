@@ -4,7 +4,6 @@ import SocialMediaList from "./ui/socialMediaList";
 import img from "@/assets/images/sm2-logo.png";
 import Image from "next/image";
 
-
 const Footer = () => {
   return (
     <footer className=" container-fluid  mx-auto ">
@@ -75,7 +74,13 @@ const Footer = () => {
           <div className="py-8 lg:flex justify-between items-center">
             {/* <span className='text-sm text-primary-foreground block'>Made with Love by <Link href={""}>ThemePerch</Link> </span> */}
             <span className="text-sm text-primary-foreground block mt-3 lg:mt-0">
+              <Link href={"/privacy-policy"}>Privacy Policy</Link>
+            </span>
+            <span className="text-sm text-primary-foreground block mt-3 lg:mt-0">
               ©2024, SM2Trust, All Rights Reserved
+            </span>
+            <span className="text-sm text-primary-foreground block mt-3 lg:mt-0">
+              <Link href={"/terms-of-use"}>Terms of Use</Link>
             </span>
           </div>
         </div>

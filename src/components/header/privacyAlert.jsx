@@ -47,7 +47,7 @@ const PrivacyAlert = ({
           technologies. Please note that if you click Reject, strictly necessary
           cookies will still be operational in order for our site to function
           properly. For more information, please visit our
-          <Link href="/privacy-use" className="font-bold underline mx-1">
+          <Link href="/privacy-policy" className="font-bold underline mx-1">
             Privacy Policy
           </Link>{" "}
           &

@@ -10,9 +10,38 @@ export const menuList = [
   {
     id: 2,
     name: "About",
-    path: "/#about",
+    path: "",
     isMegaMenu: false,
-    isDropdown: false,
+    isDropdown: [{
+      id: 1,
+      name: "Our Story",
+      path: "/#about",
+      desc: "Efficient management of financial and estate matters.",
+    },
+    {
+      id: 2,
+      name: "Methodology",
+      path: "/#methodology",
+      desc: "Compassionate care for individuals with limited decision-making abilities.",
+    },
+    {
+      id: 4,
+      name: "Mission Statement",
+      path: "/#mission-statement",
+      desc: "Tailored services for special needs trusts and guardianship.",
+    },
+    {
+      id: 5,
+      name: "Privacy Policy",
+      path: "/privacy-policy",
+      desc: "Comprehensive management of financial and estate affairs.",
+    },
+    {
+      id: 7,
+      name: "Terms of Use",
+      path: "/terms-of-use",
+      desc: "Authority to act on behalf of others in financial, health, or personal matters.",
+    },],
   },
   {
     id: 3,
