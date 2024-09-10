@@ -47,7 +47,7 @@ const Footer = () => {
                     SM2Trust{" "}
                   </p>
                   <p className="text-lg text-primary-foreground">
-                    567 Camino Mercado, Suite F,{" "}
+                    567 Camino Mercado, Suite C,{" "}
                   </p>
                   <p className="text-lg  text-primary-foreground">
                     Arroyo Grande, CA 93420{" "}

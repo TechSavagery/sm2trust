@@ -320,7 +320,7 @@ const PrivacyPolicy = () => {
       <h2 className="text-2xl font-semibold mt-8 mb-4">14. Contact Us</h2>
 
       <p className="mb-4">
-        If you have questions regarding this Privacy Policy or our handling of your personal information, would like to request more information from us, or would like to exercise a data privacy right, please contact us (mail) SM2Trust ATTN: Legal Department 567 Camino Mercado Suite F Arroyo Grande CA 93420 (email).
+        If you have questions regarding this Privacy Policy or our handling of your personal information, would like to request more information from us, or would like to exercise a data privacy right, please contact us (mail) SM2Trust ATTN: Legal Department 567 Camino Mercado Suite C Arroyo Grande CA 93420 (email).
       </p>
 
       <h2 className="text-2xl font-semibold mt-8 mb-4">15. Cookie Policy</h2>

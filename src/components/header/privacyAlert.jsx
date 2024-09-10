@@ -11,11 +11,13 @@ const PrivacyAlert = ({
   bg_muted,
 }) => {
   const handleButtonClick = (value) => {
-    if (value == "") {
-      setPrivacyAlertActive(false);
-    } else {
+    if (value == "reject" || value == "accept") {
       localStorage.setItem("PrivacyPolicy", value);
       setPrivacyAlertActive(false);
+      console.log(value);
+    } else {
+      setPrivacyAlertActive(false);
+      console.log(value);
     }
   };
 

@@ -604,7 +604,7 @@ const TermsOfService = () => {
       <p className="mb-4">
         If you have questions regarding these Terms, or would like to request
         more information from us, please contact us at SM2Trust, ATTN: Legal
-        Department, 567 Camino Mercado, Suite F, Arroyo Grande, CA 93420.{" "}
+        Department, 567 Camino Mercado, Suite C, Arroyo Grande, CA 93420.{" "}
       </p>
     </div>
   );
