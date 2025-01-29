@@ -33,19 +33,13 @@ import GeneralAbout from "@/components/section/about/generalAbout";
 import faq_img from "@/assets/images/grapes.jpg";
 import bg_banner from "@/assets/images/contact-image-2.jpg";
 
-function getCookie(name) {
-  const value = `; ${document.cookie}`;
-  const parts = value.split(`; ${name}=`);
-  if (parts.length === 2) return parts.pop().split(";").shift();
-}
-
 const Home = () => {
   const [privacyAlertActive, setPrivacyAlertActive] = useState(false);
 
   useEffect(() => {
     const privacyPolicy = localStorage.getItem("PrivacyPolicy");
     console.log(privacyPolicy);
-    if (privacyPolicy != "accept" || "reject") {
+    if (privacyPolicy !== "accept" && privacyPolicy !== "reject") {
       setPrivacyAlertActive(true);
     }
   }, []);
