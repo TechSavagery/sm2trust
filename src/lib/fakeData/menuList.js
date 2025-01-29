@@ -3,7 +3,7 @@ export const menuList = [
   {
     id: 1,
     name: "Home",
-    path: "#",
+    path: "/",
     isMegaMenu: false,
     isDropdown: false,
   },
@@ -81,8 +81,8 @@ export const menuList = [
       },
       {
         id: 8,
-        name: "Fees",
-        path: "/#services",
+        name: "Fee Schedule",
+        path: "/fees",
         desc: "Hourly billing based on task and expertise.",
       },
     ],

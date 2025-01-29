@@ -71,7 +71,7 @@ const bannerBottomContent = [
   {
     id: 6,
     banner_img: hero_7,
-    title: "Fees",
+    title: "Fee Schedule",
   },
 ];
 const BannerTwo = () => {
