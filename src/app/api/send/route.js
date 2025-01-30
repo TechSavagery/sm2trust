@@ -12,6 +12,15 @@ export async function POST(request) {
     const { firstName, lastName, email, subject, message } =
       await request.json();
 
+    // Check if RESEND is set to false
+    if (process.env.RESEND === "false") {
+      await new Promise((resolve) => setTimeout(resolve, 7500)); // Delay 3s
+      return NextResponse.json({
+        success: true,
+        message: "Email sending simulated.",
+      });
+    }
+
     // Send the email using Resend
     const { data, error } = await resend.emails.send({
       from: "SM2Trust Leads <leads@sm2trust.com>",
