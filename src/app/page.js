@@ -188,7 +188,7 @@ const Home = () => {
         {/* -------- FAQ Section -------- */}
         <Image src={faq_img} loading="lazy" alt="img" />
 
-        <section id="faq" className="offset-section">
+        <section id="faq" className="">
           <Faq className={"pb-20"} />
         </section>
 

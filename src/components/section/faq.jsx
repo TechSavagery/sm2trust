@@ -124,7 +124,7 @@ const Faq = ({ className }) => {
         />
       </div>
       <div className="container lg:pt-30 2sm:pt-20 pt-14">
-        <div className="grid lg:grid-cols-[70%_auto] items-center gap-17.5">
+        <div className="grid lg:grid-cols-[100%_auto] items-center gap-17.5">
           <div>
             <Accordion type="single" defaultValue="1" collapsible>
               {faqData.map(({ id, ans, question }) => {
