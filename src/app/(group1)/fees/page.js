@@ -146,22 +146,6 @@ const ServiceSingle = () => {
                 </ul>
               </div>
               <div className="pt-12.5">
-                <Title title_text={"General Fee Provisions"} />
-                <ul className="list-disc pl-5">
-                  <li>
-                    <p className="mt-2.5">
-                      All fees are subject to periodic adjustment.
-                    </p>
-                  </li>
-                  <li>
-                    <p className="mt-2.5">
-                      Telephone calls, electronic communications, and travel
-                      time are billable.
-                    </p>
-                  </li>
-                </ul>
-              </div>
-              <div className="pt-12.5">
                 <Title title_text={"Reimbursements and Third-Party Fees"} />
                 <ul className="list-disc pl-5">
                   <li>

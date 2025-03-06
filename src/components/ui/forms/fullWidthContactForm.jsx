@@ -75,7 +75,7 @@ const FullWidthContactForm = () => {
         <div className="flex justify-between">
           {sent ? (
             <button
-              className="flex items-center justify-center gap-2.5 whitespace-nowrap sm:text-2xl text-xl font-bold border-2 border-green-500 px-10 sm:py-[15px] py-3 relative overflow-hidden after:absolute after:right-0 after:bottom-0 after:top-0 after:z-[-1] after:bg-primary text-green-500 after:w-0 cursor-not-allowed"
+              className="w-full flex items-center justify-center gap-2.5 whitespace-nowrap sm:text-2xl text-xl font-bold border-2 border-green-500 px-10 sm:py-[15px] py-3 relative overflow-hidden after:absolute after:right-0 after:bottom-0 after:top-0 after:z-[-1] after:bg-primary text-green-500 after:w-0 cursor-not-allowed"
               type="button"
             >
               Sent
@@ -83,7 +83,7 @@ const FullWidthContactForm = () => {
           ) : (
             <button
               type="submit"
-              className={`border px-6 py-2 rounded transition-all ${
+              className={`w-full border px-6 py-2 rounded transition-all ${
                 isSending
                   ? "flex items-center justify-center gap-2.5 whitespace-nowrap sm:text-2xl text-xl font-bold border-2 border-primary px-10 sm:py-[15px] py-3 relative overflow-hidden after:absolute after:right-0 after:bottom-0 after:top-0 after:z-[-1] after:bg-primary after:w-0 cursor-not-allowed"
                   : "flex items-center justify-center gap-2.5 whitespace-nowrap sm:text-2xl text-xl font-bold border-2 border-primary px-10 sm:py-[15px] py-3 relative overflow-hidden after:absolute after:right-0 after:bottom-0 after:top-0 after:z-[-1] after:bg-primary after:w-0 after:transition-all after:duration-500 hover:after:w-full hover:text-secondary-foreground transition-all duration-500"
