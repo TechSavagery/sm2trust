@@ -88,7 +88,7 @@ const Home = () => {
             <div className="container 2sm:mt-[120px] sm:mt-[80px] mt-[60px]">
               <div className="grid lg:grid-cols-[65%_auto] gap-[38px]">
                 <div className="relative after:absolute sm:after:-left-12.5 after:-left-5 after:top-1/2 after:-translate-y-1/2 after:w-[1px] sm:after:h-[130%] after:h-[120%] after:bg-primary sm:ml-12.5 ml-5">
-                  <h1 className="text-primary-foreground [font-size:_clamp(48px,7vw,130px)] font-extrabold leading-110">
+                  <h1 id="our-story" className="text-primary-foreground [font-size:_clamp(48px,7vw,130px)] font-extrabold leading-110 scroll-mt-24">
                     Our Story
                   </h1>
                   <span className="inline-block w-[300px] h-[1px] bg-primary"></span>

@@ -12,10 +12,10 @@ export const menuList = [
     name: "About",
     path: "",
     isMegaMenu: false,
-    isDropdown: [{
+    isDropdown: [    {
       id: 1,
       name: "Our Story",
-      path: "/#about",
+      path: "/#our-story",
       desc: "Efficient management of financial and estate matters.",
     },
     {
