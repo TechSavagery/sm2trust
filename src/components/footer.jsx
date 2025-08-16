@@ -77,7 +77,7 @@ const Footer = () => {
               <Link href={"/privacy-policy"}>Privacy Policy</Link>
             </span>
             <span className="text-sm text-primary-foreground block mt-3 lg:mt-0">
-              ©2024, SM2Trust, All Rights Reserved
+              ©{new Date().getFullYear()}, SM2Trust, All Rights Reserved
             </span>
             <span className="text-sm text-primary-foreground block mt-3 lg:mt-0">
               <Link href={"/terms-of-use"}>Terms of Use</Link>
