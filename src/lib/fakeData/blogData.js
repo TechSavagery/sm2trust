@@ -12,16 +12,6 @@ import blog_estate_planning from "@/assets/images/blog-estate-planning-made-simp
 export const blogData = [
     {
         id:2,
-        thumb:blog_1,
-        author:"",
-        date:"January 14, 2022",
-        tag:"Conservatorship",
-        title:`Could Netflix's "I Care Alot" Happen in Real Life?`,
-        desc:"", 
-        link:"/blog/avoiding-the-reality-of-i-care-a-lot"
-    },
-    {
-        id:1,
         thumb:blog_estate_planning,
         author:"",
         date:"December 1, 2025",
@@ -30,5 +20,16 @@ export const blogData = [
         desc:"", 
         link:"/blog/estate-planning-made-simple"
     },
+    {
+        id:1,
+        thumb:blog_1,
+        author:"",
+        date:"January 14, 2022",
+        tag:"Conservatorship",
+        title:`Could Netflix's "I Care Alot" Happen in Real Life?`,
+        desc:"", 
+        link:"/blog/avoiding-the-reality-of-i-care-a-lot"
+    },
+
 
 ]
