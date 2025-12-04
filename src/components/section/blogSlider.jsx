@@ -37,7 +37,7 @@ const BlogSlider = ({ data, text_muted }) => {
             className=''
         >
             {
-                data.map(({ id, thumb, date, title, tag, link }) => {
+                [...data].sort((a, b) => a.id - b.id).map(({ id, thumb, date, title, tag, link }) => {
                     return (
                         <SwiperSlide key={id}>
                             <BlogCard date={date} tag={tag} thumb={thumb} title={title} text_muted={text_muted} link={link} />
