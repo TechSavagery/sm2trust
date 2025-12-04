@@ -51,7 +51,7 @@ const BlogSingle = () => {
             </h1>
             <p className="mt-14 text-secondary-foreground flex sm:gap-[9px] gap-[1px]">
               {" "}
-              <span>15 November ‘23</span> / <span>Interior</span> /{" "}
+              <span>November 15, 2023</span> / <span>Interior</span> /{" "}
               <span>5 min read</span>{" "}
             </p>
           </div>

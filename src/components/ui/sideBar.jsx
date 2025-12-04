@@ -123,15 +123,15 @@ const SideBar = ({ order }) => {
         <h1 className="[font-size:_clamp(33px,5vw,48px)] font-semibold leading-[100%] text-primary-foreground mb-[30px] last:mb-0">
           Recent Posts
         </h1>
-        {blogData.slice(0, 3).map(({ id, date, title, thumb }) => {
+        {blogData.slice(0, 3).map(({ id, date, title, thumb, link }) => {
           return (
             <div key={id} className="flex gap-[26px] mb-7.5 last:mb-0">
-              <div className="max-w-[162px]">
-                <Image src={thumb} loading="lazy" alt={title} />
+              <div className="max-w-[162px] w-full aspect-[4/3] overflow-hidden flex-shrink-0">
+                <Image src={thumb} loading="lazy" alt={title} width={162} height={122} className="w-full h-full object-cover" />
               </div>
               <div>
                 <Link
-                  href={"/blog-single"}
+                  href={link || "/blog-single"}
                   className="hover-underline text-2xl leading-120 font-semibold"
                 >
                   <span>
