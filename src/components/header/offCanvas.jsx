@@ -1,11 +1,13 @@
 'use client'
-import React from 'react'
+import React, { useId } from 'react'
 import CloseIcon from '@/assets/icons/closeIcon';
 import Search from '@/assets/icons/search';
 
 import { cn } from '@/lib/utils';
 
 const Offcanvas = ({ setOffcanvaseActive, offcanvaseActive, bg_muted }) => {
+    const searchFieldId = useId();
+
     return (
         <div className={cn(`w-full h-1/2 bg-primary ${bg_muted} fixed z-40 ${offcanvaseActive ? "bottom-0 visible " : "-bottom-[100%] invisible"} left-0 transition-all duration-700`)}>
             <div className='w-full relative'>
@@ -25,9 +27,9 @@ const Offcanvas = ({ setOffcanvaseActive, offcanvaseActive, bg_muted }) => {
             >
                 <h1 className=' [font-size:_clamp(90px,14vw,200px)] font-extrabold text-secondary-foreground leading-[100%] mb-5'>Search</h1>
                 <div className='relative'>
-                    <label htmlFor="site-search" className="sr-only">Search</label>
+                    <label htmlFor={searchFieldId} className="sr-only">Search</label>
                     <input
-                        id="site-search"
+                        id={searchFieldId}
                         type='search'
                         placeholder='Type & Hit Enter'
                         required

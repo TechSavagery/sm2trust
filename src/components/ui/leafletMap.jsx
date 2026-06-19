@@ -1,5 +1,5 @@
 'use client'
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { MapContainer, Marker, Popup, TileLayer, Tooltip, useMap } from "react-leaflet"
 import "leaflet/dist/leaflet.css"
 import L from "leaflet";
@@ -28,6 +28,23 @@ function SetViewOnClick({ mapDirection }) {
     return null;
   }
 
+function MapAccessibilityLabels() {
+    const map = useMap();
+
+    useEffect(() => {
+        const container = map.getContainer();
+        container.setAttribute("aria-label", "Office location map");
+
+        const zoomIn = container.querySelector(".leaflet-control-zoom-in");
+        const zoomOut = container.querySelector(".leaflet-control-zoom-out");
+
+        zoomIn?.setAttribute("aria-label", "Zoom in");
+        zoomOut?.setAttribute("aria-label", "Zoom out");
+    }, [map]);
+
+    return null;
+}
+
 const LeafletMap = () => {
     const { mapDirection } = useContext(MapContext)
     return (
@@ -37,6 +54,7 @@ const LeafletMap = () => {
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
             <SetViewOnClick mapDirection={mapDirection}/>
+            <MapAccessibilityLabels />
             <MultipleMarkers />
         </MapContainer>
 
