@@ -71,10 +71,13 @@ const Footer = () => {
             </div>
           </div>
           <hr className="bg-pritext-primary-foreground" />
-          <div className="py-8 lg:flex justify-between items-center">
+          <div className="py-8 lg:flex justify-between items-center gap-4 flex-wrap">
             {/* <span className='text-sm text-primary-foreground block'>Made with Love by <Link href={""}>ThemePerch</Link> </span> */}
             <span className="text-sm text-primary-foreground block mt-3 lg:mt-0">
               <Link href={"/privacy-policy"}>Privacy Policy</Link>
+            </span>
+            <span className="text-sm text-primary-foreground block mt-3 lg:mt-0">
+              <Link href={"/accessibility"}>Accessibility</Link>
             </span>
             <span className="text-sm text-primary-foreground block mt-3 lg:mt-0">
               ©{new Date().getFullYear()}, SM2Trust, All Rights Reserved

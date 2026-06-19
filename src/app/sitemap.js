@@ -66,5 +66,11 @@ export default function sitemap() {
         changeFrequency: 'weekly',
         priority: 0.3,
       },
+      {
+        url: 'https://sm2trust.com/accessibility',
+        lastModified: new Date(),
+        changeFrequency: 'monthly',
+        priority: 0.3,
+      },
     ]
   }
