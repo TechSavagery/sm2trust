@@ -84,7 +84,7 @@ const Home = () => {
         {/* -------- About Section -------- */}
         <section id="about" className="offset-section blog-single pt-40 pb-40">
           <div>
-            <Image src={bg_banner} loading="lazy" alt="img" />
+            <Image src={bg_banner} loading="lazy" alt="SM2 Trust team and office" />
             <div className="container 2sm:mt-[120px] sm:mt-[80px] mt-[60px]">
               <div className="grid lg:grid-cols-[65%_auto] gap-[38px]">
                 <div className="relative after:absolute sm:after:-left-12.5 after:-left-5 after:top-1/2 after:-translate-y-1/2 after:w-[1px] sm:after:h-[130%] after:h-[120%] after:bg-primary sm:ml-12.5 ml-5">
@@ -186,7 +186,7 @@ const Home = () => {
         </section>
 
         {/* -------- FAQ Section -------- */}
-        <Image src={faq_img} loading="lazy" alt="img" />
+        <Image src={faq_img} loading="lazy" alt="Grapes on a vine" />
 
         <section id="faq" className="">
           <Faq className={"pb-20"} />

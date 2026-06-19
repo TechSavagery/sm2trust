@@ -11,8 +11,8 @@ const Footer = () => {
         <div className="container">
           <div className="grid lg:grid-cols-3 grid-cols-1 items-center pt-[100px] pb-20">
             <div>
-              <Link href={""} className="text-primary-foreground">
-                <Image src={img} loading="lazy" width={100} height={20} />
+              <Link href="/" className="text-primary-foreground">
+                <Image src={img} loading="lazy" width={100} height={20} alt="SM2 Trust" />
               </Link>
               <h5 className="xl:text-2xl text-xl font-semibold text-primary-foreground leading-160 pt-2.5 pb-3">
                 Conservator & Trustee Services

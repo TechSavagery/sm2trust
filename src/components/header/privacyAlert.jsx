@@ -23,6 +23,9 @@ const PrivacyAlert = ({
 
   return (
     <div
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="privacy-alert-title"
       className={cn(
         `py-50 w-full min-h-[50vh] h-auto bg-secondary ${bg_muted} fixed z-40 ${
           privacyAlertActive ? "bottom-0 visible" : "-bottom-[100%] invisible"
@@ -31,7 +34,9 @@ const PrivacyAlert = ({
     >
       <div className="w-full relative">
         <button
+          type="button"
           onClick={() => handleButtonClick("")}
+          aria-label="Close privacy notice"
           className="absolute right-10 top-10 text-secondary-foreground hidden sm:block"
         >
           <CloseIcon />
@@ -39,7 +44,7 @@ const PrivacyAlert = ({
       </div>
       <hr />
       <div className="container h-full mx-auto flex flex-col justify-center px-6 py-8 sm:px-10 sm:py-12">
-        <h4 className="text-secondary-foreground text-3xl 2sm:text-4xl font-bold leading-135">
+        <h4 id="privacy-alert-title" className="text-secondary-foreground text-3xl 2sm:text-4xl font-bold leading-135">
           We Respect your Privacy
         </h4>
         <p className="text-secondary-foreground mt-5">
@@ -60,45 +65,33 @@ const PrivacyAlert = ({
         </p>
 
         <div className="mt-[70px] flex flex-row justify-center space-x-2 flex-wrap sm:flex-nowrap">
-          <Link
-            href={""}
-            className="inline-block mt-4 sm:mt-0 flex-grow sm:flex-grow-0"
+          <ButtonOutline
+            type="button"
             onClick={() => handleButtonClick("accept")}
+            className={
+              "inline-block mt-4 sm:mt-0 flex-grow sm:flex-grow-0 border-secondary text-secondary-foreground sm:px-10 px-4 py-2 after:hover:bg-secondary after:left-0 hover:text-primary-foreground"
+            }
           >
-            <ButtonOutline
-              className={
-                "border-secondary text-secondary-foreground sm:px-10 px-4 py-2 after:hover:bg-secondary after:left-0 hover:text-primary-foreground"
-              }
-            >
-              Accept
-            </ButtonOutline>
-          </Link>
-          <Link
-            href={""}
-            className="inline-block mt-4 sm:mt-0 flex-grow sm:flex-grow-0"
+            Accept
+          </ButtonOutline>
+          <ButtonOutline
+            type="button"
             onClick={() => handleButtonClick("reject")}
+            className={
+              "inline-block mt-4 sm:mt-0 flex-grow sm:flex-grow-0 border-secondary text-secondary-foreground sm:px-10 px-4 py-2 after:hover:bg-secondary after:left-0 hover:text-primary-foreground"
+            }
           >
-            <ButtonOutline
-              className={
-                "border-secondary text-secondary-foreground sm:px-10 px-4 py-2 after:hover:bg-secondary after:left-0 hover:text-primary-foreground"
-              }
-            >
-              Reject
-            </ButtonOutline>
-          </Link>
-          <Link
-            href={""}
-            className="inline-block mt-4 sm:mt-0 flex-grow sm:flex-grow-0"
+            Reject
+          </ButtonOutline>
+          <ButtonOutline
+            type="button"
             onClick={() => handleButtonClick("")}
+            className={
+              "inline-block mt-4 sm:mt-0 flex-grow sm:flex-grow-0 border-secondary text-secondary-foreground sm:px-10 px-4 py-2 after:hover:bg-secondary after:left-0 hover:text-primary-foreground"
+            }
           >
-            <ButtonOutline
-              className={
-                "border-secondary text-secondary-foreground sm:px-10 px-4 py-2 after:hover:bg-secondary after:left-0 hover:text-primary-foreground"
-              }
-            >
-              Close
-            </ButtonOutline>
-          </Link>
+            Close
+          </ButtonOutline>
         </div>
       </div>
     </div>

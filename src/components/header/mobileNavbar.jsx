@@ -41,21 +41,28 @@ const MobileNavbar = () => {
         <div className="container-fluid ">
           <div className="flex items-center justify-between py-4">
             <Link href={"/"} className="text-primary-foreground">
-              <Image src={img} loading="lazy" width={100} height={20} />
+              <Image src={img} loading="lazy" width={100} height={20} alt="SM2 Trust" />
             </Link>
             <div>
               <nav
+                id="mobile-navigation"
+                aria-label="Mobile navigation"
                 className={`max-h-screen min-h-screen overflow-y-auto bg-[#F9FFFC] absolute transition-all duration-500 ${
                   isMenuActive ? "right-0" : "sm:-right-full -right-[150%]"
                 } top-0 z-50 py-4 px-4`}
               >
                 <div className="flex justify-between items-center">
                   <Link href={"/"} className="text-primary-foreground">
-                  <Image src={img} loading="lazy" width={100} height={20} />
+                  <Image src={img} loading="lazy" width={100} height={20} alt="SM2 Trust" />
                   </Link>
-                  <div onClick={() => setIsMenuActive(false)}>
-                    <IoMdClose className="text-2xl cursor-pointer" />
-                  </div>
+                  <button
+                    type="button"
+                    onClick={() => setIsMenuActive(false)}
+                    aria-label="Close menu"
+                    className="text-2xl cursor-pointer"
+                  >
+                    <IoMdClose aria-hidden="true" />
+                  </button>
                 </div>
                 <ul className="mt-7">
                   {menuList.map(
@@ -89,6 +96,7 @@ const MobileNavbar = () => {
                                 }`}
                               >
                                 <svg
+                                  aria-hidden="true"
                                   width="12"
                                   height="9"
                                   viewBox="0 0 12 9"
@@ -194,12 +202,16 @@ const MobileNavbar = () => {
                   </div>
                 </ul>
               </nav>
-              <div
+              <button
+                type="button"
+                aria-label="Open menu"
+                aria-expanded={isMenuActive}
+                aria-controls="mobile-navigation"
                 className="text-primary-foreground"
                 onClick={() => setIsMenuActive(true)}
               >
                 <MenuIcon className="cursor-pointer" />
-              </div>
+              </button>
             </div>
           </div>
         </div>

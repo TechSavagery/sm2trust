@@ -36,7 +36,7 @@ const HeaderFour = () => {
                 <div className='bottom-navbar'>
                     <div className='relative flex justify-between items-center'>
                         <div>
-                            <Link href="/" className='text-primary-foreground'>
+                            <Link href="/" className='text-primary-foreground' aria-label="SM2 Trust home">
                                 <Logo height={"31"} width={"219"} />
                             </Link>
                         </div>
@@ -51,7 +51,7 @@ const HeaderFour = () => {
                                                     {
                                                         (isDropdown || isMegaMenu) &&
                                                         <span className={` transition-all duration-500 rotate-180 group-hover:rotate-0 group-hover:text-secondary-foreground`}>
-                                                            <svg width="12" height="9" viewBox="0 0 12 9" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                            <svg aria-hidden="true" width="12" height="9" viewBox="0 0 12 9" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                                                 <path d="M11 8L6 2L1 8" />
                                                             </svg>
                                                         </span>
@@ -67,14 +67,28 @@ const HeaderFour = () => {
                                         )
                                     })
                                 }
-                                <li className='other_icon text-primary-foreground px-6  cursor-pointer' onClick={() => setOffcanvaseActive(true)}>
-                                    <Search height={"24"} width={"24"} />
+                                <li>
+                                    <button
+                                        type="button"
+                                        aria-label="Open search"
+                                        className='other_icon text-primary-foreground px-6 cursor-pointer'
+                                        onClick={() => setOffcanvaseActive(true)}
+                                    >
+                                        <Search height={"24"} width={"24"} />
+                                    </button>
                                 </li>
-                                <li className='other_icon text-primary-foreground pl-6 relative cursor-pointer flex items-center' onClick={() => setCartActive(true)}>
-                                    <ShopCart height={"24"} width={"24"} />
-                                    {
-                                        products.length ? <span className='font-medium flex items-center justify-center text-secondary-foreground text-sm absolute -top-3 -right-4 w-6 h-6 bg-primary rounded-full'>{countCartProductQuantity(products)}</span> : ""
-                                    }
+                                <li>
+                                    <button
+                                        type="button"
+                                        aria-label="Open cart"
+                                        className='other_icon text-primary-foreground pl-6 relative cursor-pointer flex items-center'
+                                        onClick={() => setCartActive(true)}
+                                    >
+                                        <ShopCart height={"24"} width={"24"} />
+                                        {
+                                            products.length ? <span className='font-medium flex items-center justify-center text-secondary-foreground text-sm absolute -top-3 -right-4 w-6 h-6 bg-primary rounded-full'>{countCartProductQuantity(products)}</span> : ""
+                                        }
+                                    </button>
                                 </li>
                             </ul>
                         </nav>

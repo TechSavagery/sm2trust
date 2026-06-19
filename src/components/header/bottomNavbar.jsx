@@ -32,10 +32,10 @@ const BottomNavbar = ({ linkColor }) => {
             <div className='bottom-navbar flex justify-between items-center'>
                 <div className='py-3'>
                     <Link href="/" className={cn(`logo text-primary-foreground ${linkColor}`)}>
-                    <Image src={img} loading="lazy" width={100} height={20} />
+                    <Image src={img} loading="lazy" width={100} height={20} alt="SM2 Trust" />
                     </Link>
                 </div>
-                <nav>
+                <nav aria-label="Main navigation">
                     <ul className='flex items-center'>
                         {
                             menuList.map(({ id, isDropdown, name, path, isMegaMenu }) => {
@@ -46,7 +46,7 @@ const BottomNavbar = ({ linkColor }) => {
                                             {
                                                 (isDropdown || isMegaMenu) &&
                                                 <span className={` transition-all duration-500 rotate-180 group-hover:rotate-0 group-hover:text-secondary-foreground`}>
-                                                    <svg width="12" height="9" viewBox="0 0 12 9" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                    <svg aria-hidden="true" width="12" height="9" viewBox="0 0 12 9" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                                         <path d="M11 8L6 2L1 8" />
                                                     </svg>
                                                 </span>
