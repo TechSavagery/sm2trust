@@ -16,8 +16,23 @@ const icon = L.icon({
 });
 
 const MultipleMarkers = () => {
-    return addressList.map(({id, lat_lng}) => {
-        return <Marker key={id} position={lat_lng} icon={icon}></Marker>;
+    return addressList.map(({id, lat_lng, company, address}) => {
+        const markerLabel = `${company} office location: ${address}`;
+
+        return (
+            <Marker
+                key={id}
+                position={lat_lng}
+                icon={icon}
+                eventHandlers={{
+                    add: (event) => {
+                        const element = event.target.getElement();
+                        element?.setAttribute("aria-label", markerLabel);
+                        element?.setAttribute("alt", markerLabel);
+                    },
+                }}
+            />
+        );
     });
 }
 
