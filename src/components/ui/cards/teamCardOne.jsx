@@ -46,7 +46,7 @@ const TeamCardOne = ({
               width={"auto"}
               height={"auto"}
               alt={name}
-              className="w-full h-full"
+              className="w-full aspect-square object-cover"
             />
           </div>
           <div className="bg-secondary  absolute left-0 bottom-[-10%] min-w-[295px] transition-all duration-500 group-hover:min-w-full">
